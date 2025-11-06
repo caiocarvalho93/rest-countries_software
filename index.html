@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where in the World?</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body class="light-mode">
+  <header>
+    <div class="container">
+      <h1>Where in the World?</h1>
+      <button id="themeToggle">Cai Dark Mode</button>
+    </div>
+
+  </header>
+
+
+  <!-- README Popup -->
+  <div id="readmePopup" class="readme-popup">
+    
+    <div class="readme-content">
+      <img src="images/cai-avatar.png" alt="Cai avatar" class="readme-avatar">
+      
+      <h2>REST Country Journal</h2>
+      <p>
+        Welcome, traveler. You’ve just entered <strong>“Where in the World?”</strong>,  
+        a simple yet curious web experiment built in pure JavaScript, HTML, and CSS.
+      </p>
+
+      <p>
+        Search any country, explore its population, region, capital, and neighbors.  
+        Filter by continent. Switch between Light and Dark mode,  
+        your theme will be remembered for your next journey.
+      </p>
+
+      <p>
+        This project was coded from scratch, no frameworks, no shortcuts,  
+        just a keyboard, caffeine, and curiosity.
+      </p>
+
+      <div class="readme-footer">
+
+        <p>
+          Loved this project & got inspired to create  
+          <a href="https://github.com/caiocarvalho93/cai_universal-translation-api" target="_blank" class="rocket-link">
+            Universal Language Translator API
+          </a> - free for all.
+        </p>
+        <p class="rocket-note">
+          Click here 
+          <a href="https://github.com/caiocarvalho93/cai_universal-translation-api" target="_blank" class="big-rocket">🚀</a> 
+          to have this website user friend world translator upgrade your project.
+        </p>
+      </div>
+
+      <p class="signature">- Cai</p>
+
+      <div class="readme-buttons">
+        <a id="closeReadme" href="#" class="readme-btn">Enter the World -></a>
+        <a href="https://gitlab.com/restcountries/restcountries" target="_blank" class="readme-btn">CREATOR RESOURCE</a>
+        <a href="https://restcountries.com/" target="_blank" class="readme-btn">CREATOR SITE</a>
+      
+        </div>
+    </div>
+  </div>
+
+
+
+  <main>
+    <!-- MAINPG  -->
+    <div id="homePage" class="page active">
+
+      <div class="container">
+        <div class="controls">
+          <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Search for a country...">
+          </div>
+
+          <select id="regionFilter">
+
+            <option value="">Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+
+        </div>
+
+        <div class="countries-grid" id="countriesGrid">
+          <div class="loading">Loading countries...</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2n - my detailss - wanted to add unemployment rate with API but thrw that on next project  -->
+    <div id="detailPage" class="page">
+      <div class="container">
+        <button id="backButton" class="back-button">← Back</button>
+        <div id="countryDetail" class="country-detail"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- extra - goobye bar & appreciationn -->
+  <footer class="bottom-bar">
+
+    <div class="bar-buttons">
+      <a href="https://restcountries.com/" target="_blank" class="bar-btn">#GRIND.API</a>
+      <a href="https://github.com/caiocarvalho93/cai_universal-translation-api" target="_blank" class="bar-btn">#ONE.LOVE</a>
+      <a href="https://www.linkedin.com/in/cai-/" target="_blank" class="bar-btn">LINK.UP</a>
+      <span class="heart">&lt;3</span>
+
+    </div>
+  </footer>
+
+ 
+  <div id="pageLoader" class="page-loader">
+    <img src="images/cai-avatar.png" alt="Loading" class="loader-gif">
+    <p>Loading...</p>
+  </div>
+</body>
+</html>
